@@ -10,8 +10,8 @@ va applicato uno sconto del 40% per gli over 65.
 L’output del prezzo finale va messo fuori in forma umana (con massimo due decimali, per indicare centesimi sul prezzo).
 */
 
-const userKm = Number(prompt("Quanti km vuoi percorrere?"));
-const userAge = Number(prompt("Quanti anni hai?"));
+const userKm = parseFloat((prompt("Quanti km vuoi percorrere?")));
+const userAge = parseFloat((prompt("Quanti anni hai?")));
 
 let userPrice = userKm * 0.21;
 
@@ -21,4 +21,4 @@ if (userAge < 18) {
     userPrice = userPrice - (userPrice*0.40);
 }
 
-console.log(Math.round(userPrice*100)/100);
+console.log(Math.round(userPrice*100)/100 +" € ");
